@@ -293,10 +293,18 @@ export class RealexConnector extends XmlGateway implements IRecurringService {
       request.SHIPPING_CODE = encoder(builder.shippingAddress.postalCode || "");
       request.SHIPPING_CO = encoder(builder.shippingAddress.country || "");
     }
-    if (builder.sillingAddress) {
-      request.BILLING_CODE = encoder(builder.billingAddress.postalCode || "");
-      request.BILLING_CO = encoder(builder.billingAddress.country || "");
+    if (builder.billingAddress) {
+      // request.BILLING_CODE = encoder(builder.billingAddress.postalCode || "");
+      // request.BILLING_CO = encoder(builder.billingAddress.country || "");
+      request.HPP_BILLING_STREET1 = encoder(builder.billingAddress.streetAddress1 || "");
+      request.HPP_BILLING_CODE = encoder(builder.billingAddress.postalCode || "");
+      request.HPP_BILLING_CITY = encoder(builder.billingAddress.city || "");
+      request.HPP_BILLING_CO = encoder(builder.billingAddress.country || "");
+      request.HPP_BILLING_COUNTRY = encoder(builder.billingAddress.country || "");
+      request.HPP_BILLING_POSTALCODE = encoder(builder.billingAddress.postalCode || "");
     }
+    request.PAYER_EXIST = builder.email === '' || '0';
+    request.HPP_CUSTOMER_EMAIL = encoder(builder.email || "test@nogoingtoreachanywhere.com");
     request.CUST_NUM = encoder(builder.customerId || "");
     request.VAR_REF = encoder(builder.clientTransactionId || "");
     request.HPP_LANG = encoder(this.hostedPaymentConfig.language || "");

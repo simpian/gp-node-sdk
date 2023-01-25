@@ -1,12 +1,12 @@
 {
-  "name": "globalpayments-api",
-  "version" : "1.4.8",
-  "description": "Global Payments SDK for NodeJS for Heartland and Global Payments eCommerce gateways",
+  "name": "@simpiancom/gp-node-api",
+  "version": "1.0.2",
+  "description": "GP API and Simpian Integration",
   "author": "Heartland Payment Systems",
   "license": "GPL-2.0",
   "repository": {
     "type": "git",
-    "url": "https://github.com/globalpayments/node-sdk.git"
+    "url": "git+https://github.com/simpian/gp-node-sdk.git"
   },
   "main": "./lib/src/index.js",
   "typings": "./lib/src/index",
@@ -52,5 +52,17 @@
     "source": [
       "lib/src/**/*.js"
     ]
+  },
+  "bugs": {
+    "url": "https://github.com/simpian/gp-node-sdk/issues"
+  },
+  "homepage": "https://github.com/simpian/gp-node-sdk#readme",
+  "bin": {
+    "gp-node-api": "netsuite-post.js"
+  },
+  "directories": {
+    "example": "examples",
+    "lib": "lib",
+    "test": "test"
   }
 }
