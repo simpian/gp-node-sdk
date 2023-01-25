@@ -1,6 +1,6 @@
 {
   "name": "@simpiancom/gp-node-api",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "GP API and Simpian Integration",
   "author": "Heartland Payment Systems",
   "license": "GPL-2.0",
